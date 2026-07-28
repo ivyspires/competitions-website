@@ -34,7 +34,7 @@ export default defineStackbitConfig({
     ssg: {
       proxyWebsockets: true,
       logPatterns: {
-        up: ["Server at"]
+        up: ["Watching"]
       }
     }
   },
