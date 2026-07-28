@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "glrc-site",
+  "compatibility_date": "2026-07-28",
+  "main": "src/index.js",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "glrc-site-db",
+      "database_id": "040012c3-0cb9-4abd-8742-d33808b50d58"
+    }
+  ],
+  "vars": {
+    "SESSION_SECRET": "ee1dcffd28b8e70def99d89ff7113266c0ff288254f174b6ab069c65e2f5696e"
+  }
+}

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | Global Reasoning Challenge</title>
+<meta name="description" content="The Global Reasoning Challenge (GRC) is an international competition testing deductive, probabilistic, causal, and strategic reasoning, critical reading, and estimation. Open to students worldwide.">
+<meta name="theme-color" content="#0d1117">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="placeholder-note">Sample layout inspired by international student-competition sites &mdash; all names, dates, and figures are placeholders. Swap in your own branding and content.</div>
+<div class="announcement-bar">Qualification Round deadline: <strong>6 September 2026</strong> &mdash; <a href="rounds.html#compete">register free &#8594;</a></div>
+<div class="nav-utility">
+  <div class="nav-utility-inner">
+    <div class="nav-lang">
+      <span aria-hidden="true">&#127760;</span> English
+    </div>
+    <div class="nav-auth">
+      <div class="nav-login">
+        <button type="button" class="nav-login-btn">Login <span aria-hidden="true">&#9662;</span></button>
+        <div class="nav-login-panel">
+          <a href="login.html?role=participant">Participant</a>
+          <a href="login.html?role=teacher">Teacher</a>
+          <a href="login.html?role=ambassador">Ambassador</a>
+          <a href="login.html?role=school">School</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">GR</span>
+      <span>GRC <small>GLOBAL REASONING CHALLENGE</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="rounds.html">Rounds & Process</a>
+      <a href="awards.html">Awards</a>
+      <a href="training.html">Training</a>
+      <a href="support.html">FAQ</a>
+      <div class="nav-more" id="navMore">
+        <button type="button" id="navMoreToggle">More <span aria-hidden="true">&#9662;</span></button>
+        <div class="nav-more-panel">
+        <div class="nav-more-col">
+          <h6>Schools & Teachers</h6>
+          <a href="teacher-registration.html">Teacher Registration</a>
+          <a href="school-partnership.html">School Partnerships</a>
+          <a href="school-registration.html">School Registration</a>
+        </div>
+        <div class="nav-more-col">
+          <h6>Ambassadors</h6>
+          <a href="ambassador.html">Become an Ambassador</a>
+          <a href="search-by-country.html">Search by Country</a>
+          <a href="national-ambassadors.html">National Ambassadors</a>
+        </div>
+        <div class="nav-more-col">
+          <h6>Competition</h6>
+          <a href="rounds.html">Rounds & Process</a>
+          <a href="awards.html">Prizes & Awards</a>
+          <a href="age-groups.html">Age Groups</a>
+          <a href="verify.html">Verify Certificate</a>
+          <a href="about.html">About GRC</a>
+        </div>
+        <div class="nav-more-col">
+          <h6>Resources</h6>
+          <a href="training.html">Training</a>
+          <a href="posters-flyers.html">Posters & Flyers</a>
+          <a href="resources.html">Resources</a>
+          <a href="newsletter.html">Newsletter</a>
+          <a href="support.html">Support</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <a href="rounds.html#compete" class="nav-cta">Participate</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow on-dark">GRC 2026</span>
+      <h1>Global Reasoning <em>Challenge</em></h1>
+      <p class="lead">In an age of endless information, judgment is the scarce skill. Test your reasoning against students worldwide, across three rounds of deduction, probability, and clear thinking.</p>
+      <div class="stat-row">
+        <div><div class="stat-num">3</div><div class="stat-label">Rounds</div></div>
+        <div><div class="stat-num">150+</div><div class="stat-label">Countries</div></div>
+        <div><div class="stat-num">$1,500</div><div class="stat-label">Prize money</div></div>
+      </div>
+      <div class="hero-ctas">
+        <a href="rounds.html#compete" class="btn btn-primary">Register now</a>
+        <a href="rounds.html" class="btn btn-ghost">See the rounds</a>
+      </div>
+    </div>
+    <div class="card-dark" id="compete">
+      <h3 style="color:#fff;">Qualification Round is open</h3>
+      <p>Books, the internet, and AI tools are allowed for research, but you must solve the problems yourself. Later rounds are supervised and tool-free, so learn the material now.</p>
+      <div class="countdown" id="countdown">
+        <div class="cell"><b id="cd-days">00</b><span>Days</span></div>
+        <div class="cell"><b id="cd-hours">00</b><span>Hrs</span></div>
+        <div class="cell"><b id="cd-mins">00</b><span>Min</span></div>
+        <div class="cell"><b id="cd-secs">00</b><span>Sec</span></div>
+      </div>
+      <p style="border-left:2px solid var(--color-accent); padding-left:var(--space-3); font-style:italic; font-size:var(--text-sm);">Three friends. One always tells the truth, one always lies, one answers at random. Ask one question to find the truth-teller.</p>
+      <a href="rounds.html" class="btn btn-primary btn-block">See round details</a>
+    </div>
+  </div>
+</section>
+
+<nav class="subnav" aria-label="Section shortcuts">
+  <div class="subnav-inner" id="subnavLinks">
+    <a href="#top" data-spy>Intro</a>
+    <a href="#compete" data-spy>Register</a>
+    <a href="#journey" data-spy>Schedule</a>
+    <a href="#features" data-spy>Domains</a>
+    <a href="#awards" data-spy>Awards</a>
+    <a href="#faq" data-spy>FAQ</a>
+  </div>
+</nav>
+
+<section id="journey">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Competition timeline</span>
+      <h2>Three rounds, one global final</h2>
+      <p>From an open online qualifier to a live, supervised final exam. <a href="rounds.html">Full process &#8594;</a></p>
+    </div>
+    <div class="grid timeline">
+      <div class="card phase-card">
+        <span class="num">01</span>
+        <span class="badge badge-active">Active</span>
+        <h3>Qualification</h3>
+        <div class="when">Deadline: 6 Sep 2026</div>
+        <p>Open online round. Mixed-format screening across deductive logic, probabilistic reasoning, and critical reading.</p>
+      </div>
+      <div class="card phase-card">
+        <span class="num">02</span>
+        <span class="badge badge-locked">Locked</span>
+        <h3>Semi-Finals</h3>
+        <div class="when">18 Oct 2026</div>
+        <p>Study a real research paper in advance, then sit a supervised 60-minute exam on it plus two further problems.</p>
+      </div>
+      <div class="card phase-card">
+        <span class="num">03</span>
+        <span class="badge badge-locked">Locked</span>
+        <h3>Final Round</h3>
+        <div class="when">17 Nov 2026</div>
+        <p>A single supervised exam of about 30 questions, drawing on everything from earlier rounds under real time pressure.</p>
+      </div>
+      <div class="card phase-card">
+        <span class="num">04</span>
+        <span class="badge badge-final">Results</span>
+        <h3>Awards</h3>
+        <div class="when">23 Nov 2026</div>
+        <p>Over $1,500 in prizes, international and national honours, and a certificate for every participant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="features">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What we test</span>
+      <h2>Six domains of reasoning</h2>
+      <p>No syllabus to memorize. We test how you think, not what you have been taught.</p>
+    </div>
+    <div class="domains-grid grid">
+      <div class="domain"><div class="idx">01</div><div class="q">&quot;What must be true?&quot;</div><p><strong>Deductive reasoning.</strong> Starting from facts or rules and working out what necessarily follows.</p></div>
+      <div class="domain"><div class="idx">02</div><div class="q">&quot;What is likely to be true?&quot;</div><p><strong>Probabilistic reasoning.</strong> Weighing evidence and base rates, and updating sensibly as new information arrives.</p></div>
+      <div class="domain"><div class="idx">03</div><div class="q">&quot;What causes what?&quot;</div><p><strong>Causal reasoning.</strong> Telling real causes from coincidence and spotting confounding variables.</p></div>
+      <div class="domain"><div class="idx">04</div><div class="q">&quot;What should I do when others are thinking too?&quot;</div><p><strong>Strategic reasoning.</strong> Working out how others will act, and choosing accordingly.</p></div>
+      <div class="domain"><div class="idx">05</div><div class="q">&quot;Is this argument sound?&quot;</div><p><strong>Critical reading.</strong> Finding hidden assumptions and gaps, and telling a valid case from one that only seems right.</p></div>
+      <div class="domain"><div class="idx">06</div><div class="q">&quot;How do I structure this messy problem?&quot;</div><p><strong>Modelling &amp; estimation.</strong> Breaking a vague problem into the parts that matter and reaching a defensible estimate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark" id="awards">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow on-dark">Prizes &amp; awards</span>
+      <h2>Recognition at every level</h2>
+      <p>Over $1,500 in prizes, plus international and national honours. <a href="awards.html" style="color:var(--color-accent-tint);">Full award structure &#8594;</a></p>
+    </div>
+    <div class="grid award-grid">
+      <div class="card-dark"><h3 style="color:#fff;">International Awards</h3><p>Gold, Silver, and Bronze for each age group among the top performers in the Final Round.</p></div>
+      <div class="card-dark"><h3 style="color:#fff;">National Awards</h3><p>The best performers from each participating country receive special recognition.</p></div>
+      <div class="card-dark"><h3 style="color:#fff;">Ambassador &amp; School Awards</h3><p>Recognition for the most committed ambassadors, teachers, and schools.</p></div>
+      <div class="card-dark"><h3 style="color:#fff;">Certificates for All</h3><p>Every participant receives an official certificate of participation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="teachers">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">For educators</span>
+      <h2>Teachers &amp; schools</h2>
+      <p>Offer GRC as an extracurricular opportunity for students who enjoy thinking hard. Tools, resources, and recognition included.</p>
+    </div>
+    <div class="grid teach-grid">
+      <div class="card"><h3>Teacher account</h3><p>Register to view student results and documents, cover Semi-Final registration costs for groups, and supervise exams.</p><p style="margin-top:0.6em;"><a href="teacher-registration.html">Teacher registration &#8594;</a></p></div>
+      <div class="card"><h3>School partnership</h3><p>Strengthen collaboration with dedicated tools, reduced fees, and recognition for integrating GRC into academic activities.</p><p style="margin-top:0.6em;"><a href="school-partnership.html">School partnerships &#8594;</a></p></div>
+      <div class="card"><h3>Materials &amp; resources</h3><p>Access a growing collection of problem sets, training materials, and classroom-ready resources.</p><p style="margin-top:0.6em;"><a href="training.html">Training &amp; preparation &#8594;</a></p></div>
+      <div class="card"><h3>Awards for schools</h3><p>Teachers and schools with strong participation and performance receive special honours.</p><p style="margin-top:0.6em;"><a href="awards.html">Learn more &#8594;</a></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="ambassadors">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Local ambassador program</span>
+      <h2>Lead reasoning in your community</h2>
+      <p>Coordinate a local group, run activities, and represent GRC while building real leadership experience. <a href="ambassador.html">Full program details &#8594;</a></p>
+    </div>
+    <div class="levels">
+      <span class="level-pill">Newcomer</span>
+      <span class="level-pill">Experienced</span>
+      <span class="level-pill">Accomplished</span>
+      <span class="level-pill">Distinguished</span>
+      <span class="level-pill">Honoured</span>
+    </div>
+    <div style="margin-top:var(--space-6);">
+      <a href="signup.html?role=ambassador" class="btn btn-dark">Apply to become an ambassador</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head centered">
+      <span class="eyebrow">Support</span>
+      <h2>Frequently asked questions</h2>
+      <p>A few quick answers &mdash; the <a href="support.html">full FAQ</a> covers every topic.</p>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item open">
+        <button class="faq-q">What is GRC?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Reasoning is the foundation of clear thinking, connecting mathematics, language, science, and everyday decisions. GRC gives students the chance to challenge their reasoning skills beyond the typical curriculum.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who can participate?<span class="plus">+</span></button>
+        <div class="faq-a"><p>All current high school and university students, split into Junior, Youth, and Senior age groups. Everyone receives the same problems; higher groups need more points to qualify.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Are teams allowed?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Everyone submits their own solutions. In the Qualification Round you may work with friends and classmates; the Semi-Final and Final Round must be completed alone.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much is the total prize?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Prizes and awards are worth a total of $1,500, alongside international and national recognition and certificates for every participant.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark text-center" id="newsletter">
+  <div class="container">
+    <span class="eyebrow on-dark">Newsletter</span>
+    <h2>Stay updated</h2>
+    <p style="margin-inline:auto; margin-bottom:var(--space-6);">Get notified about rounds, deadlines, resources, and the next edition.</p>
+    <form class="news-form" style="margin-inline:auto;" data-api="/api/newsletter">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <button type="submit">Subscribe</button>
+      <p class="form-status" data-form-status style="width:100%; margin-top:var(--space-2);"></p>
+    </form>
+    <div class="form-note" style="margin-top:var(--space-3);">No spam. Unsubscribe anytime.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <span class="brand-mark">GR</span>
+          <span>GRC 2026</span>
+        </div>
+        <p>Global Reasoning Challenge: an international competition in abstract reasoning, open to students worldwide.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      <div>
+        <h5>Competition</h5>
+        <ul>
+          <li><a href="about.html">About GRC</a></li>
+          <li><a href="rounds.html">Rounds &amp; Process</a></li>
+          <li><a href="awards.html">Prizes &amp; Awards</a></li>
+          <li><a href="age-groups.html">Age Groups</a></li>
+          <li><a href="verify.html">Verify Certificate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Get Involved</h5>
+        <ul>
+          <li><a href="teacher-registration.html">Teacher Registration</a></li>
+          <li><a href="school-registration.html">School Registration</a></li>
+          <li><a href="school-partnership.html">School Partnerships</a></li>
+          <li><a href="ambassador.html">Become an Ambassador</a></li>
+          <li><a href="search-by-country.html">Search by Country</a></li>
+          <li><a href="national-ambassadors.html">National Ambassadors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources &amp; Contact</h5>
+        <ul>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="posters-flyers.html">Posters &amp; Flyers</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+          <li><a href="financial-aid.html">Financial Aid</a></li>
+          <li><a href="support.html">Support / FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-partners">
+      <div class="foot-partners-label">Trusted by educators and partners worldwide</div>
+      <div class="foot-partners-row">
+        <span>Lumen Academy</span>
+        <span>Horizon Schools Network</span>
+        <span>ThinkForward Foundation</span>
+        <span>Meridian STEM Alliance</span>
+        <span>Clearline Education</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Global Reasoning Challenge. Sample layout for reference only.</span>
+      <span>
+        <a href="rules.html">Rules &amp; Privacy</a>
+        <a href="partners.html">Partners</a>
+        <a href="team.html">Team</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
