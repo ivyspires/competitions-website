@@ -29,7 +29,7 @@ export default defineStackbitConfig({
   stackbitVersion: "~0.6.0",
   ssgName: "eleventy",
   nodeVersion: "18",
-  devCommand: "npx @11ty/eleventy --serve --port {PORT}",
+  devCommand: "npm run dev",
   experimental: {
     ssg: {
       proxyWebsockets: true,
