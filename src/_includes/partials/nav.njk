@@ -1,0 +1,46 @@
+<div class="announcement-bar">Qualification Round deadline: <strong>6 September 2026</strong> &mdash; <a href="rounds.html#compete">register free &#8594;</a></div>
+<div class="nav-utility">
+  <div class="nav-utility-inner">
+    <div class="nav-lang">
+      <span aria-hidden="true">&#127760;</span> English
+    </div>
+    <div class="nav-auth">
+      <div class="nav-login">
+        <button type="button" class="nav-login-btn">Login <span aria-hidden="true">&#9662;</span></button>
+        <div class="nav-login-panel">
+          <a href="login.html?role=participant">Participant</a>
+          <a href="login.html?role=teacher">Teacher</a>
+          <a href="login.html?role=ambassador">Ambassador</a>
+          <a href="login.html?role=school">School</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">GR</span>
+      <span>GRC <small>GLOBAL REASONING CHALLENGE</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      {% for link in nav.primary %}<a href="{{ link.href }}"{% if link.href == pageItem.slug + '.html' %} aria-current="page"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+      <div class="nav-more" id="navMore">
+        <button type="button" id="navMoreToggle">More <span aria-hidden="true">&#9662;</span></button>
+        <div class="nav-more-panel">
+        {% for col in nav.more %}<div class="nav-more-col">
+          <h6>{{ col.group }}</h6>
+          {% for item in col.items %}<a href="{{ item.href }}">{{ item.label }}</a>
+          {% endfor %}
+        </div>
+        {% endfor %}
+        </div>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <a href="rounds.html#compete" class="nav-cta">Participate</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </div>
+</header>

@@ -1,48 +1,72 @@
-# GLRC Site — Netlify (Functions + Supabase)
+# GRC Site — Eleventy + Netlify Visual Editor
 
-Static site + backend, parallel to the Cloudflare Worker version, running on
-Netlify Functions with a Supabase (Postgres) database instead of D1.
+This is the Global Reasoning Challenge sample site rebuilt on Eleventy so it can be
+edited with Netlify's Visual Editor (drag-and-click content editing), while keeping
+the exact same design, URLs, forms, login/signup, and PDF downloads as the previous
+static build.
 
-## Structure
+## What changed vs. the plain static site
 
-- `public/` — all static pages, `styles.css`, `script.js`, `downloads/`
-- `netlify/functions/` — one function per API route (contact, newsletter,
-  school-registration, school-partnership, signup, login, logout) plus
-  `account.js` which server-renders `/account`
-- `netlify/functions/lib/auth.js` — shared password hashing (PBKDF2), signed
-  session cookies (HMAC), and a small Supabase REST (PostgREST) client
-- `netlify.toml` — routes `/api/*` and `/account` to the functions above
+- Page content (title, meta description, full body HTML) now lives in
+  `content/pages/*.json` — one file per page — instead of being hard-coded in a
+  Python generator script.
+- Eleventy (`src/templates/page.njk`) reads those JSON files and renders each one
+  through the shared layout/nav/footer in `src/_includes/`.
+- `stackbit.config.ts` tells Netlify Visual Editor how to find and edit those
+  content files (Git CMS content source).
+- Everything else — `styles.css`, `script.js`, the `downloads/` PDFs and ZIP, and
+  the `netlify/functions` backend (login, signup, contact, newsletter, school
+  registration/partnership, account) — is copied over unchanged and untouched by
+  this migration.
 
-## Database
+## Local development
 
-Uses the existing Supabase project **global-competitions**
-(`https://flptfztscwsrpphvzbpk.supabase.co`), with 5 tables already created:
-`users`, `contact_messages`, `newsletter_subscribers`,
-`school_registrations`, `school_partnerships`. All have Row Level Security
-enabled with **no policies**, meaning only the `service_role` key (used
-server-side by these functions) can read or write — the public/anon key has
-zero access, by design.
+```bash
+npm install
+npm run dev       # Eleventy dev server on :3000 with live reload
+# or
+npm run build      # outputs static site to _site/
+```
 
-## Required environment variables (Netlify → Site settings → Environment variables)
+## Editing content
 
-- `SUPABASE_URL` = `https://flptfztscwsrpphvzbpk.supabase.co`
-- `SUPABASE_SERVICE_ROLE_KEY` — copy this from the Supabase dashboard:
-  Project Settings → API → `service_role` secret key. **Never commit this to
-  git or share it in chat** — it bypasses Row Level Security entirely. Paste
-  it directly into Netlify's environment variable UI.
-- `SESSION_SECRET` = `12537b372c9cfd45081161af6d339b95c2e855dd2aefe06d49bd5b4daa0c0c58`
-  (already generated for you; treat it as a secret too — used to sign login
-  session cookies)
+Each page's content file is at `content/pages/<slug>.json`:
 
-## Deploy
+```json
+{
+  "title": "About GRC",
+  "metaDescription": "...",
+  "body": "<section>...</section>"
+}
+```
 
-This site is already connected to Netlify via GitHub (project
-`global-stem-competitions`, repo `ivyspires/competitions-website`), so a
-normal `git push` to `main` triggers an automatic build and deploy — no
-extra steps needed beyond setting the environment variables above once.
+`body` is the full HTML for the page (hero + all sections). Editing it directly,
+or through Visual Editor's rich text/HTML editor, changes the rendered page.
 
-## Notes
+## Enabling Netlify Visual Editor (steps you need to run yourself)
 
-- This is a second, independent backend from the Cloudflare Worker version —
-  they don't share data (D1 vs Supabase are separate databases). Pick one as
-  the source of truth if you don't want two divergent sets of submissions.
+I can't install GitHub Apps or click through your Netlify dashboard on your
+behalf, so once this is pushed to your GitHub repo:
+
+1. Push this project to your GitHub repo (same as before — I can give you the
+   exact git commands, but the actual `git push` has to run under your own
+   credentials).
+2. In the Netlify dashboard, go to your site → **Project configuration** →
+   **Visual Editor** → **Enable visual editor**.
+3. Netlify will prompt you to install its GitHub App on the repo if it isn't
+   already — approve that in your GitHub account.
+4. Confirm the working branch (usually `main`) under **Visual editor → Preview
+   settings**.
+5. Netlify builds the project in a cloud container using `devCommand` from
+   `stackbit.config.ts` (`npx @11ty/eleventy --serve --port {PORT}`) and opens
+   the Visual Editor with your sitemap (all 24 pages) on the left and the live
+   page preview in the middle.
+
+## Deploying (production builds, same as before)
+
+`netlify.toml` now builds with `npm run build` (Eleventy) and publishes `_site/`,
+functions still deploy from `netlify/functions/`. The `/api/*` and `/account`
+redirects are unchanged.
+
+Required environment variables (unchanged from the previous Netlify Functions
+setup): `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SESSION_SECRET`.

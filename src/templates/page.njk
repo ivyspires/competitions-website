@@ -1,0 +1,9 @@
+---
+pagination:
+  data: pages
+  size: 1
+  alias: pageItem
+permalink: "{{ pageItem.slug }}.html"
+layout: layouts/base.njk
+---
+{{ pageItem.body | safe }}
