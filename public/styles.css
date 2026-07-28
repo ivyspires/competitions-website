@@ -464,6 +464,11 @@ section { padding-block: var(--space-24); position: relative; }
 .form-card form { flex-direction: column; }
 .form-field { display: flex; flex-direction: column; gap: 0.4rem; }
 .form-field label { font-size: var(--text-xs); font-weight: 700; color: var(--color-text); text-transform: uppercase; letter-spacing: 0.03em; }
+.form-field-row { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+.form-field-row select { flex: 1; min-width: 6rem; }
+.form-field small { color: var(--color-text-faint); font-size: var(--text-xs); }
+.form-field .btn-block { width: 100%; }
+
 .form-field input, .form-field select, .form-field textarea {
   border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 0.65rem 0.9rem; font-size: var(--text-sm);
 }
