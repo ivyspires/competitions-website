@@ -17,7 +17,7 @@ document.getElementById('navToggle').addEventListener('click', function(){
   });
   var deadlineEl = document.getElementById('cd-days');
   if (deadlineEl) {
-    var deadline = new Date('2026-09-06T23:59:00Z').getTime();
+    var deadline = new Date('2026-09-06T23:58:57Z').getTime();
     function tick(){
       var now = new Date().getTime();
       var diff = Math.max(0, deadline - now);
